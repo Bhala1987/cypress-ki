@@ -1,0 +1,1 @@
+This is a Cypress test project and using GitHub Actions Workflows for CI pipeline.

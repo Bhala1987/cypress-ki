@@ -1,0 +1,156 @@
+docker run -it -v ${PWD}:/e2e -w /e2e cypress/included:12.8.1 --browser chrome
+
+1st RUN:
+
+libva error: vaGetDriverNameByIndex() failed with unknown libva error, driver_name = (null)
+[430:0604/222954.903086:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        12.8.1                                                                         │
+  │ Browser:        Chrome 111 (headless)                                                          │
+  │ Node Version:   v18.14.1 (/usr/local/bin/node)                                                 │
+  │ Specs:          1 found (kitest.cy.ts)                                                         │
+  │ Searched:       cypress**/*.cy.{js,jsx,ts,tsx}                                                 │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Running:  kitest.cy.ts                                                                    (1 of 1)
+
+
+  Ki insurance technical test project
+    ✓ Clear form on first page (8147ms)
+    1) Create a new quote
+    ✓ See my pending quotes (9124ms)
+    ✓ Back button verification (18764ms)
+
+
+  3 passing (56s)
+  1 failing
+
+  1) Ki insurance technical test project
+       Create a new quote:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `[type="date"]`, but never found it.
+      at Context.eval (webpack:///./cypress/e2e/kitest.cy.ts:31:0)
+
+
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        4                                                                                │
+  │ Passing:      3                                                                                │
+  │ Failing:      1                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  1                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     55 seconds                                                                       │
+  │ Spec Ran:     kitest.cy.ts                                                                     │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  /e2e/cypress/screenshots/kitest.cy.ts/Ki insurance technical test project -- Cre     (1280x720)
+     ate a new quote (failed).png
+
+
+  (Video)
+
+  -  Started processing:  Compressing to 32 CRF
+  -  Finished processing: 11 seconds
+  -  Video output: /e2e/cypress/videos/kitest.cy.ts.mp4
+
+    Compression progress:  100%
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ✖  kitest.cy.ts                             00:55        4        3        1        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ✖  1 of 1 failed (100%)                     00:55        4        3        1        -        -  
+	
+	
+	
+	
+	
+	
+2nd RUN:
+
+libva error: vaGetDriverNameByIndex() failed with unknown libva error, driver_name = (null)
+[439:0604/223300.529802:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        12.8.1                                                                         │
+  │ Browser:        Chrome 111 (headless)                                                          │
+  │ Node Version:   v18.14.1 (/usr/local/bin/node)                                                 │
+  │ Specs:          1 found (kitest.cy.ts)                                                         │
+  │ Searched:       cypress**/*.cy.{js,jsx,ts,tsx}                                                 │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Running:  kitest.cy.ts                                                                    (1 of 1)
+
+
+  Ki insurance technical test project
+    ✓ Clear form on first page (8230ms)
+    ✓ Create a new quote (13268ms)
+    ✓ See my pending quotes (2772ms)
+    ✓ Back button verification (12121ms)
+
+
+  4 passing (40s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        4                                                                                │
+  │ Passing:      4                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     40 seconds                                                                       │
+  │ Spec Ran:     kitest.cy.ts                                                                     │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Video)
+
+  -  Started processing:  Compressing to 32 CRF
+  -  Finished processing: 9 seconds
+
+  -  Video output: /e2e/cypress/videos/kitest.cy.ts.mp4
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ✔  kitest.cy.ts                             00:40        4        4        -        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ✔  All specs passed!                        00:40        4        4        -        -        - 	
+	
+	
