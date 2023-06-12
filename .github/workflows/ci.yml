@@ -22,7 +22,9 @@ jobs:
         run: npm install
 
       - name: Run Cypress tests
-        run: npm run tests:ci
+        run: |
+          chmod +x ./node_modules/.bin/cypress
+          npm run tests:ci
 
       - name: Publish Cypress test report
         uses: cypress-io/github-action@v2
