@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Run Cypress tests
-        run: npm run test:ci
+        run: npm run tests:ci
 
       - name: Publish Cypress test report
         uses: cypress-io/github-action@v2
