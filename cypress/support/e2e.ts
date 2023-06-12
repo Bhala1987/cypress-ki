@@ -18,3 +18,8 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+import "cypress-xpath"
+require('cypress-xpath')
+import "cypress-plugin-tab"
+require('cypress-plugin-tab')

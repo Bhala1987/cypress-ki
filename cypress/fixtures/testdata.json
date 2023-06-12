@@ -1,0 +1,17 @@
+[
+    {
+        "primaryCountry": "United Kingdom",
+        "primaryInsured": "Newco Ltd",
+        "classOfBusiness": "Energy"
+    },
+    {
+        "primaryCountry": "Japan",
+        "primaryInsured": "AAA Inc",
+        "classOfBusiness": "Cyber"
+    },
+    {
+        "primaryCountry": "United States of America",
+        "primaryInsured": "Service Tech Ltd",
+        "classOfBusiness": "Property"
+    }
+]
