@@ -1,15 +1,15 @@
 name: Run Cypress Tests using Cypress Docker Image
 
 on: [push]
+
 jobs:
- cypress-test:
-   runs-on: ubuntu-latest
-   name: Cypress Tests on docker container
-   # Cypress Docker image with Chrome v78
-   # and Firefox v70 pre-installed
-   container: cypress/browsers:node-18.16.0-chrome-113.0.5672.92-1-ff-113.0-edge-113.0.1774.35-1
-   steps:
-     - uses: actions/checkout@v2
-     - uses: cypress-io/github-action@v4
-       with:
-         browser: chrome
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run Cypress tests
+        run: |
+          docker run --rm -v $PWD:/e2e -w /e2e cypress/included:12.8.1 run --browser chrome
