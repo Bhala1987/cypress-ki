@@ -6,6 +6,5 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
   },
-  "retries": 3,
-  
+  retries: 3,
 });
