@@ -17,6 +17,7 @@
     "pretty": "prettier --write \"./**/*.{js,jsx,ts,tsx,json}\"",
     "cypress:run": "cypress run",
     "report:merge": "chmod 777 mochawesome-merge cypress/results/json/*.json > index.json",
-    "report:generate": "merge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
+    "report:generate": "merge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html",
+    "tests:ci": "cypress run --browser chrome --spec \"cypress/e2e/all.cy.ts\""
   }
 }
