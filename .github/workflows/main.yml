@@ -10,6 +10,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Run Cypress tests
+      - name: Run Cypress tests on Chrome
         run: |
-          docker run --rm -v $PWD:/e2e -w /e2e cypress/included:12.8.1 run --browser chrome
+          docker run --rm -v $PWD:/e2e -w /e2e cypress/included:12.8.1 run --browser chrome --spec "cypress/e2e/all.cy.ts"
+          
+      - name: Run Cypress tests on Firefox
+        run: |
+          docker run --rm -v $PWD:/e2e -w /e2e cypress/included:12.8.1 run --browser firefox --spec "cypress/e2e/all.cy.ts"
