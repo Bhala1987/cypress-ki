@@ -16,7 +16,7 @@
   "scripts": {
     "pretty": "prettier --write \"./**/*.{js,jsx,ts,tsx,json}\"",
     "cypress:run": "cypress run",
-    "report:merge": "mochawesome-merge cypress/results/json/*.json > index.json",
-    "report:generate": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
+    "report:merge": "chmod 777 mochawesome-merge cypress/results/json/*.json > index.json",
+    "report:generate": "merge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
   }
 }
