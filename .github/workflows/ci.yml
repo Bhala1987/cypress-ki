@@ -31,5 +31,6 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: cypress-ki-test-mochawesome-report
+          ref: cypress/reports/html/index.html
           path: cypress/reports/html/index.html
           retention-days: 30
