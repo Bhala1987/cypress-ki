@@ -3,7 +3,7 @@ name: Run Cypress Tests using Cypress Docker Image
 on:
   push:
     branches:
-      - invalid
+      - master
 
 jobs:
   build:
