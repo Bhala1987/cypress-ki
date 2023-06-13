@@ -7,7 +7,7 @@ describe("Ki insurance technical test project - Clear form & Back buttons functi
     cy.visit("https://forms.gle/eiiqRfHiRAiCXgPX7");
   });
 
-  it.only("Clear form on first page", () => {
+  it("Clear form on first page", () => {
     // And click on "See my pending quotes" radio button
     cy.xpath('//*[@data-value="See my pending quotes"]').click();
     // And click on "Clear form" button
@@ -26,8 +26,8 @@ describe("Ki insurance technical test project - Clear form & Back buttons functi
     // And the clear form dialog box should appear
     cy.get("div").contains("Clear form?").should("be.visible");
     cy.get("span")
-    .contains(regex)
-    .should("be.visible");
+      .contains(regex)
+      .should("be.visible");
     // When click on "Clear form on dialog" button
     cy.xpath(
       '//*[@role="alertdialog"]/div/div[@role="button"]//*[text()="Clear form"]'
@@ -52,8 +52,8 @@ describe("Ki insurance technical test project - Clear form & Back buttons functi
     // And the clear form dialog box should appear
     cy.get("div").contains("Clear form?").should("be.visible");
     cy.get("span")
-    .contains(regex)
-    .should("be.visible");
+      .contains(regex)
+      .should("be.visible");
     // And click on "Cancel" button
     cy.xpath(
       '//*[@role="alertdialog"]/div/div[@role="button"]//*[text()="Cancel"]'
@@ -63,8 +63,8 @@ describe("Ki insurance technical test project - Clear form & Back buttons functi
     // And the clear form dialog box should appear
     cy.get("div").contains("Clear form?").should("be.visible");
     cy.get("span")
-    .contains(regex)
-    .should("be.visible");
+      .contains(regex)
+      .should("be.visible");
     // When click on "Clear form on dialog" button
     cy.xpath(
       '//*[@role="alertdialog"]/div/div[@role="button"]//*[text()="Clear form"]'
@@ -97,8 +97,8 @@ describe("Ki insurance technical test project - Clear form & Back buttons functi
     // And the clear form dialog box should appear
     cy.get("div").contains("Clear form?").should("be.visible");
     cy.get("span")
-    .contains(regex)
-    .should("be.visible");
+      .contains(regex)
+      .should("be.visible");
     // When click on "Clear form on dialog" button
     cy.xpath(
       '//*[@role="alertdialog"]/div/div[@role="button"]//*[text()="Clear form"]'
