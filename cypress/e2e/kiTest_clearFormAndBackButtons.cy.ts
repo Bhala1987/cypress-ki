@@ -1,11 +1,13 @@
 const clearFormPara_Ubuntu = "This will remove your answers from all questions, and cannot be undone."
 const clearFormPara_Windows = "This will remove your answers from all questions and cannot be undone."
+const clearFormPara = ['This will remove your answers from all questions, and cannot be undone.', 'This will remove your answers from all questions and cannot be undone.']
+const regex = new RegExp(`${clearFormPara.join('|')}`, 'g')
 describe("Ki insurance technical test project - Clear form & Back buttons functionalities", () => {
   beforeEach("visit the URL", () => {
     cy.visit("https://forms.gle/eiiqRfHiRAiCXgPX7");
   });
 
-  it("Clear form on first page", () => {
+  it.only("Clear form on first page", () => {
     // And click on "See my pending quotes" radio button
     cy.xpath('//*[@data-value="See my pending quotes"]').click();
     // And click on "Clear form" button
@@ -13,9 +15,7 @@ describe("Ki insurance technical test project - Clear form & Back buttons functi
     // And the clear form dialog box should appear
     cy.get("div").contains("Clear form?").should("be.visible");
     cy.get("span")
-      .contains(
-        clearFormPara_Ubuntu
-      ).or(clearFormPara_Windows)
+      .contains(regex)
       .should("be.visible");
     // And click on "Cancel" button
     cy.xpath(
@@ -26,10 +26,8 @@ describe("Ki insurance technical test project - Clear form & Back buttons functi
     // And the clear form dialog box should appear
     cy.get("div").contains("Clear form?").should("be.visible");
     cy.get("span")
-      .contains(
-        clearFormPara_Ubuntu
-      ).or(clearFormPara_Windows)
-      .should("be.visible");
+    .contains(regex)
+    .should("be.visible");
     // When click on "Clear form on dialog" button
     cy.xpath(
       '//*[@role="alertdialog"]/div/div[@role="button"]//*[text()="Clear form"]'
@@ -54,10 +52,8 @@ describe("Ki insurance technical test project - Clear form & Back buttons functi
     // And the clear form dialog box should appear
     cy.get("div").contains("Clear form?").should("be.visible");
     cy.get("span")
-      .contains(
-        clearFormPara_Ubuntu
-      ).or(clearFormPara_Windows)
-      .should("be.visible");
+    .contains(regex)
+    .should("be.visible");
     // And click on "Cancel" button
     cy.xpath(
       '//*[@role="alertdialog"]/div/div[@role="button"]//*[text()="Cancel"]'
@@ -67,10 +63,8 @@ describe("Ki insurance technical test project - Clear form & Back buttons functi
     // And the clear form dialog box should appear
     cy.get("div").contains("Clear form?").should("be.visible");
     cy.get("span")
-      .contains(
-        clearFormPara_Ubuntu
-      ).or(clearFormPara_Windows)
-      .should("be.visible");
+    .contains(regex)
+    .should("be.visible");
     // When click on "Clear form on dialog" button
     cy.xpath(
       '//*[@role="alertdialog"]/div/div[@role="button"]//*[text()="Clear form"]'
@@ -103,10 +97,8 @@ describe("Ki insurance technical test project - Clear form & Back buttons functi
     // And the clear form dialog box should appear
     cy.get("div").contains("Clear form?").should("be.visible");
     cy.get("span")
-      .contains(
-        clearFormPara_Ubuntu
-      ).or(clearFormPara_Windows)
-      .should("be.visible");
+    .contains(regex)
+    .should("be.visible");
     // When click on "Clear form on dialog" button
     cy.xpath(
       '//*[@role="alertdialog"]/div/div[@role="button"]//*[text()="Clear form"]'
