@@ -1,7 +1,13 @@
 {
-    "reporter": "cypress-multi-reporters",
+    "reporter": "cypress-mochawesome-reporter",
     "reporterOptions": {
-        "configFile": "reporter-config.json"
+        "reportDir": "cypress/report",
+        "charts": true,
+        "reportPageTitle": "cypress-ki-test-report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": true,
+        "ignoreVideos": false
     },
     "videoCompression": 15
 }

@@ -23,3 +23,4 @@ import 'cypress-xpath'
 require('cypress-xpath')
 import 'cypress-plugin-tab'
 require('cypress-plugin-tab')
+import 'cypress-mochawesome-reporter/register'
