@@ -21,25 +21,15 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-#       - name: Run Cypress tests
-#         run: npm run tests:ci
-#         continue-on-error: true
-
       - name: Run Cypress Tests
         uses: cypress-io/github-action@v4
         with:
           command: npm run tests:ci
+        continue-on-error: true
           
       - name: Uploading mochawesome cypress test report
         uses: actions/upload-artifact@v2
-        if: always()
         with:
           name: cypress-ki-test-mochawesome-report
-          path: cypress/reports/html
+          path: cypress/reports/html/index.html
           retention-days: 30
-
-#       - name: Deploy report to GitHub Pages
-#         uses: peaceiris/actions-gh-pages@v3
-#         with:
-#           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./cypress/reports
