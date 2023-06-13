@@ -1,3 +1,5 @@
+const clearFormPara_Ubuntu = "This will remove your answers from all questions, and cannot be undone."
+const clearFormPara_Windows = "This will remove your answers from all questions and cannot be undone."
 describe("Ki insurance technical test project - Clear form & Back buttons functionalities", () => {
   beforeEach("visit the URL", () => {
     cy.visit("https://forms.gle/eiiqRfHiRAiCXgPX7");
@@ -12,8 +14,8 @@ describe("Ki insurance technical test project - Clear form & Back buttons functi
     cy.get("div").contains("Clear form?").should("be.visible");
     cy.get("span")
       .contains(
-        "This will remove your answers from all questions and cannot be undone."
-      )
+        clearFormPara_Ubuntu
+      ).or(clearFormPara_Windows)
       .should("be.visible");
     // And click on "Cancel" button
     cy.xpath(
@@ -25,8 +27,8 @@ describe("Ki insurance technical test project - Clear form & Back buttons functi
     cy.get("div").contains("Clear form?").should("be.visible");
     cy.get("span")
       .contains(
-        "This will remove your answers from all questions and cannot be undone."
-      )
+        clearFormPara_Ubuntu
+      ).or(clearFormPara_Windows)
       .should("be.visible");
     // When click on "Clear form on dialog" button
     cy.xpath(
@@ -53,8 +55,8 @@ describe("Ki insurance technical test project - Clear form & Back buttons functi
     cy.get("div").contains("Clear form?").should("be.visible");
     cy.get("span")
       .contains(
-        "This will remove your answers from all questions and cannot be undone."
-      )
+        clearFormPara_Ubuntu
+      ).or(clearFormPara_Windows)
       .should("be.visible");
     // And click on "Cancel" button
     cy.xpath(
@@ -66,8 +68,8 @@ describe("Ki insurance technical test project - Clear form & Back buttons functi
     cy.get("div").contains("Clear form?").should("be.visible");
     cy.get("span")
       .contains(
-        "This will remove your answers from all questions and cannot be undone."
-      )
+        clearFormPara_Ubuntu
+      ).or(clearFormPara_Windows)
       .should("be.visible");
     // When click on "Clear form on dialog" button
     cy.xpath(
@@ -102,8 +104,8 @@ describe("Ki insurance technical test project - Clear form & Back buttons functi
     cy.get("div").contains("Clear form?").should("be.visible");
     cy.get("span")
       .contains(
-        "This will remove your answers from all questions and cannot be undone."
-      )
+        clearFormPara_Ubuntu
+      ).or(clearFormPara_Windows)
       .should("be.visible");
     // When click on "Clear form on dialog" button
     cy.xpath(
